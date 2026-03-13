@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pundlik Pachupate - Assistant Manager IT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Segoe+UI,Roboto,Helvetica,Arial,sans-serif'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root { --primary-color: #008080; --secondary-color: #ff9800; }
+        body { font-family: "Segoe UI", sans-serif; background-color: #f1f3f3; }
+        
+        .main-card { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; }
+        .profile-img { width: 100%; border-bottom: 5px solid var(--primary-color); }
+        
+        .w3-teal { background-color: var(--primary-color) !important; }
+        .w3-text-teal { color: var(--primary-color) !important; }
+        
+        /* Skills Bar */
+        .skill-container { background-color: #ddd; border-radius: 10px; height: 10px; margin-bottom: 12px; }
+        .skill-fill { height: 100%; border-radius: 10px; background: linear-gradient(90deg, #008080, #00d2ff); }
+
+        /* Timeline */
+        .work-item { position: relative; padding-left: 25px; border-left: 2px solid #ccc; margin-left: 10px; margin-bottom: 20px; }
+        .work-item::before { content: ''; position: absolute; left: -9px; top: 5px; width: 16px; height: 16px; border-radius: 50%; background: var(--primary-color); border: 3px solid #fff; }
+
+        #download-fab { position: fixed; bottom: 30px; right: 30px; z-index: 100; border-radius: 50px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+        @media print {
+            #download-fab, footer { display: none !important; }
+            .main-card { box-shadow: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<button id="download-fab" class="w3-button w3-teal w3-hover-orange" onclick="generatePDF()">
+    <i class="fa fa-file-pdf-o"></i> DOWNLOAD PDF
+</button>
+
+<div id="resume-content" class="w3-content w3-margin-top" style="max-width:1300px;">
+  <div class="w3-row-padding main-card w3-white">
+    
+    <div class="w3-third w3-light-grey">
+      <div class="w3-display-container">
+        <img src="https://avatars.githubusercontent.com/u/102734445?v=4" class="profile-img" alt="Pundlik Pachupate">
+        <div class="w3-display-bottomleft w3-container w3-text-white" style="background: rgba(0,0,0,0.6); width:100%">
+          <h3>Pundlik Pachupate</h3>
+        </div>
+      </div>
+
+      <div class="w3-container w3-padding-16">
+        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Assistant Manager IT - <b class="w3-text-orange">WNS</b></p>
+        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Mumbai, India</p>
+        <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>pachupatepundlik@gmail.com</p>
+        <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91 9869835789</p>
+        <hr>
+
+        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills Matrix</b></p>
+        <p>Visual Basic Application (VBA)</p>
+        <div class="skill-container"><div class="skill-fill" style="width:90%"></div></div>
+        <p>DOT NET (C#.NET, VB.NET, Web API, MVC)</p>
+        <div class="skill-container"><div class="skill-fill" style="width:90%"></div></div>
+        <p>Microsoft SQL Server</p>
+        <div class="skill-container"><div class="skill-fill" style="width:85%"></div></div>
+        <p>Python (Automation/Scraping)</p>
+        <div class="skill-container"><div class="skill-fill" style="width:80%"></div></div>
+        <p>Angular</p>
+        <div class="skill-container"><div class="skill-fill" style="width:70%"></div></div>
+        <p>C & C++ & Java</p>
+        <div class="skill-container"><div class="skill-fill" style="width:40%"></div></div>
+        
+        <p class="w3-large"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+        <p>English, Hindi, Marathi</p>
+        <hr>
+
+        <p class="w3-large"><b><i class="fa fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Certifications</b></p>
+        <ul class="w3-ul" style="border:none">
+            <li>Dip. In IT (Klick MKCL)</li>
+            <li>Java & Android Dev (NIIT)</li>
+        </ul>
+        
+        <p class="w3-large"><b><i class="fa fa-heart fa-fw w3-margin-right w3-text-teal"></i>Hobbies</b></p>
+        <div class="w3-padding">
+            <span class="w3-tag w3-teal w3-round w3-margin-bottom">Cricket</span>
+            <span class="w3-tag w3-teal w3-round w3-margin-bottom">Programming</span>
+            <span class="w3-tag w3-teal w3-round w3-margin-bottom">Bike Riding</span>
+            <span class="w3-tag w3-teal w3-round w3-margin-bottom">Reading</span>
+			<span class="w3-tag w3-teal w3-round w3-margin-bottom">Watching TV</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-twothird w3-container">
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Profile Summary</h2>
+      <div class="w3-container w3-pale-teal w3-leftbar w3-border-teal w3-padding-large">
+        <h5 id="exp-title" style="font-weight: bold;">Loading Experience...</h5>
+        <h6 class="w3-text-teal" id="journey-text"></h6>
+        <p>Expertise in VB Development, End User Computing, RPA, MIS Ops, DBMS, Data analysis, Power BI & Visualization.</p>
+        <p><b>Currently pursuing MBA in Data Science & Business Analysis</b> to leverage advanced analytics for business growth.</p>
+      </div>
+
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+
+      <div class="work-item">
+        <h5 class="w3-opacity"><b>Assistant Manager IT - <span class="w3-text-orange">WNS</span></b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2021 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+        <p>1. Process Automation With VBA MS Office & UI Design.
+
+           2. Power BI Reports & Automating them with Fabric / Power Automate.
+
+           3. Building Desktop Application for end users & after support.
+
+           4. Development with .NET Framework & C#.
+
+           5. Python automation & web scraping (Selenium, Pandas, Openpyxl, CV2).
+
+           6. Data analysis and visualization.</p>
+      </div>
+
+      <div class="work-item">
+        <h5 class="w3-opacity"><b>Assistant Manager Automations - <span class="w3-text-blue">VISTRA</span></b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021 - Nov 2024 (3 Years)</h6>
+        <p>1. Process Automation for operations in VBA MS Office.
+
+           2. Working on Power BI Reports & Automating them with Fabric / Power Automate.
+
+           3. Building Desktop Application for end users & support.
+
+           4. Managing Team & providing required training.
+
+           5. Managing MIS for management accounting, KPI, Productivity & FTE planning.</p>
+      </div>
+
+      <div class="work-item">
+        <h5 class="w3-opacity"><b>Senior Associate Process Automation - <span class="w3-text-blue">Atos Syntel</span> >> <span class="w3-text-orange">SS&C DST</span></b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2018 - Jan 2020 >> Jan 2020 - Dec 2021 (3.6 Years)</h6>
+        <p class="w3-small w3-text-grey"><i>Note: Merger of DST Systems With SS&C, who is client of Atos Syntel</i></p>
+        <p>1. Basic SQL DBMS, VB script, JScript Testing.
+
+           2. Creating VBA Application in MS Excel for Process automation.
+
+           3. HTML, XML, CSS, FTP Hub Pages Creations.
+
+           4. Responsible for client query and technical troubleshooting.
+
+           5. Reconciliation on Fast and I Fast systems.
+
+           6. Handling errors and solving issues for developed tools.
+
+           7. QC for VBA Tools & Training new team members.</p>
+      </div>
+
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+      
+      <div class="w3-container w3-card w3-light-grey w3-margin-bottom w3-padding">
+        <h5 class="w3-opacity"><b>MBA In Data Science & Business Analysis</b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2025 - <span class="w3-tag w3-teal w3-round">Pursuing</span></h6>
+        <hr style="margin:5px">
+      </div>
+
+      <div class="w3-container">
+        <h5 class="w3-opacity"><b>Bachelor of Banking and Insurance (BBI) - Mumbai University</b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 | 74% Score</h6>
+        <hr>
+      </div>
+      
+      <div class="w3-container">
+        <h5 class="w3-opacity"><b>HSC & SSC - Maharashtra State Board</b></h5>
+        <p>HSC (2015): 65.38% | SSC (2013): 65.40%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top w3-padding-16">
+  <div class="w3-xlarge">
+    <a href="https://www.linkedin.com/in/PundlikPachupate/"><i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/Pundlik12" class="w3-margin-left"><i class="fa fa-github"></i></a>
+  </div>
+  <p>Pundlik Anandrao Pachupate - Assistant Manager IT Portfolio</p>
+</footer>
+
+<script>
+    // Experience Logic
+    const start = new Date('6/18/2010');
+    const today = new Date();
+    const diffYears = Math.ceil(Math.abs(today - start) / (1000 * 60 * 60 * 24 * 365));
+    
+    document.getElementById("exp-title").innerHTML = diffYears + "+ Years of Experience in Automation & Development Management";
+    document.getElementById("journey-text").innerHTML = "<i class='fa fa-calendar fa-fw w3-margin-right'></i>Overall Journey From Jul 2010 - " + today.getFullYear() + " (" + diffYears + " Years)";
+
+    // PDF Logic
+    function generatePDF() {
+        const element = document.getElementById('resume-content');
+        const opt = {
+            margin: 0.2,
+            filename: 'Ajay_Zori_Resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    }
+</script>
+
+</body>
+</html>
